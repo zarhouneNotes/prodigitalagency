@@ -1,0 +1,18 @@
+body::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  
+  body:hover::-webkit-scrollbar-thumb {
+    background-color: #b8b8b8;
+  }
+
+
+  a:active{
+    color:  red;
+  }
+  
