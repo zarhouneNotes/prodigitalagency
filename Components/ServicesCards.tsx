@@ -133,7 +133,7 @@ const topServices = [
 
 export default function ServicesSection() {
   return (
-    <Box sx={{ py: { xs : 4 ,   md :10}, px: { xs : 1 ,   md :5}, backgroundColor: grey[100] }}>
+    <Box sx={{ py: { xs : 4 ,   md :10}, px: { xs : 1 ,   md :5}, backgroundColor: grey[200] }}>
     
 
       {/* GRID USING BOX */}

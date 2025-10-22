@@ -74,7 +74,7 @@ Qu’il s’agisse d’injections, de lasers médicaux, de peelings ou de soins 
         <StatsSection />
 
         <Stack
-          direction={{ xs: "column", sm: "row" }}
+          direction={{ xs: "row", sm: "row" }}
           spacing={2}
           justifyContent={{ xs: "center", md: "flex-start" }}
         >

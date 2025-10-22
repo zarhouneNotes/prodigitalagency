@@ -61,7 +61,7 @@ export default function page() {
     <Box sx={{ py: 8, px: { xs: 2, md: 12 } }}>
     
 
-      <Masonry columns={{ xs: 1, sm: 2, md: 4 }} sx={{bgcolor: "" }} spacing={3}>
+      <Masonry columns={{ xs: 1, sm: 2, md: 4 }} sx={{justifyContent : "center" }} spacing={3}>
         {blogPosts.map((post, index) => (
           <Card
             key={index}
