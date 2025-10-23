@@ -11,7 +11,7 @@ import List from "@mui/material/List";
 import ListItemText from "@mui/material/ListItemText";
 import Box from "@mui/material/Box";
 import { MdMenu } from "react-icons/md";
-import { Divider, ListItem, useTheme } from "@mui/material";
+import { Divider, ListItem, Stack, useTheme } from "@mui/material";
 import { grey, pink } from "@mui/material/colors";
 import { BiArrowFromLeft, BiArrowToRight } from "react-icons/bi";
 import Link from "next/link";
@@ -94,19 +94,23 @@ const MyNavbar = () => {
         }}
       >
         <Toolbar sx={{ justifyContent: "space-between"  }}>
-          {/* LOGO */}
-          <Typography
+          <Stack direction={'row'} alignItems={"center"}>
+            {/* <img src={"/images/dcm.png"} width={"50px"}/> */}
+             <Typography
 
             variant="h6"
             sx={{
               fontFamily: "Poppins",
               fontWeight: 600,
               letterSpacing: 1,
-              color : theme.palette.primary.main
+              color : theme.palette.primary.dark
             }}
           >
-            Clinique Éclat
+            DR.DOUNIA CABINET
           </Typography>
+          </Stack>
+          {/* LOGO */}
+         
 
           {/* NAV ITEMS DESKTOP */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 6 ,  alignItems : "center" }}>
