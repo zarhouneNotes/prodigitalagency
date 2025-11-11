@@ -15,13 +15,13 @@ export default function Home() {
     
         {/* <MyNavbar /> */}
         <HeroSection />
-        <Summary />
         <ServicesCarousel />
+        <Summary />
         <WhyUsSection />
         <FeedbackSection />
-        <GallerySection />
+        {/* <GallerySection /> */}
         <CTASection />
-        {/* <Footer /> */}
+        <Footer />
     </>
   );
 }

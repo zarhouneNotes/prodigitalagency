@@ -26,7 +26,8 @@ export default function CTASection() {
           lineHeight: 1.4,
         }}
       >
-        Offrez à votre peau le soin qu’elle mérite  <br />  retrouvez éclat, confiance et harmonie naturelle.
+                Boostez vos compétences dès aujourd'hui
+
       </Typography>
 
       {/* --- Supporting Text --- */}
@@ -36,11 +37,11 @@ export default function CTASection() {
         mb={4}
         sx={{ maxWidth: "600px", mx: "auto" }}
       >
-        Prenez rendez-vous dès aujourd’hui avec le Dr. Dounia Chehaibou et découvrez une approche moderne et bienveillante de la médecine esthétique.
+        Découvrez nos formations en techniques de vente, marketing digital et e-commerce. Profitez d’un accompagnement personnalisé pour atteindre vos objectifs professionnels plus rapidement.
       </Typography>
 
       {/* --- CTA Button --- */}
-      <Link href={"/contact"}>
+      <Link href={"/formations"}>
       <Button
         variant="contained"
         color="primary"
@@ -53,7 +54,7 @@ export default function CTASection() {
           textTransform: "none",
         }}
         >
-        Prendre Rendez-vous
+        Découvrir les formations
       </Button>
         </Link>
     </Box>

@@ -11,7 +11,7 @@ function ServicesButton({color}) {
         <Link  href={'/services'}>
         {/* <CtaButton color={color} vr={vr}  content={'Contactez-nous'} endIcon={<BsArrowFromLeft />} /> */}
             <Button color={ color ? color :   'info'} variant='outlined' endIcon={ <BiCategory />} >
-            Voir nos services
+            Voir nos formations
             </Button>
         </Link>
     </>

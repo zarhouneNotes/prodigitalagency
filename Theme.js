@@ -6,7 +6,7 @@ const myTheme = createTheme({
 
     palette : {
         primary : {
-            main : pink[400]
+            main : "#C11FB0"
             
         } , 
         secondary : {
@@ -29,8 +29,8 @@ const myTheme = createTheme({
             styleOverrides : {
                 root : {
                     /////////style
-                    borderRadius :'20px' , 
-                    padding : "10px 25px",
+                    borderRadius :'0px' , 
+                    padding : "9px 20px",
                     textTransform :'none',
                     fontFamily : 'Poppins',
                     textWrap  :"nowrap" , 

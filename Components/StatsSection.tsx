@@ -3,7 +3,7 @@ import { Box, Card, CardContent, Typography } from "@mui/material";
 
 export default function StatsSection() {
   const stats = [
-    { label: "Années d'expérience", value: "10+" },
+    { label: "Années d'Expetise", value: "10+" },
     { label: "Clients satisfaits", value: "1 200+" },
     { label: "Taux de satisfaction", value: "98%" },
   ];
@@ -28,10 +28,12 @@ export default function StatsSection() {
             // py: 4,
             // aspectRatio :'1/1',
 
-            boxShadow: 0,
-            // border: '0.5px solid pink ',
+            boxShadow: 6,
+            // border: '0.5px solid',
             transition: "all 0.3s ease",
-            bgcolor :'transparent'
+            bgcolor :'transparent' , 
+            
+            // borderColor : 'primary.main'
             
           }}
         >

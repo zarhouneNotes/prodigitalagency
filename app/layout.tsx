@@ -5,7 +5,7 @@ import "./globals.css";
 import MyNavbar from  "../Components/Navbar"
 
 import Providers from '../Providers'
-import { CssBaseline } from "@mui/material";
+import { Box, CssBaseline } from "@mui/material";
 import Head from "next/head";
 import Footer from "@/Components/Footer";
 
@@ -17,7 +17,7 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600"],
 });
 export const metadata: Metadata = {
-  title: "Dr. Dounia Chehaibou - Médecine esthétique/anti-âge Marrakech",
+  title: "Pro Digital Agence",
   description: "cabinet dr Chehaibou Dounia  ",
 };
 
@@ -36,7 +36,8 @@ export default function RootLayout({
        <CssBaseline />
         <MyNavbar />
          {children}
-         <Footer />
+         {/* <Box  bgcolor={"grey"}  >HEY</Box> */}
+         {/* <Footer /> */}
        </Providers>
       </body>
     </html>

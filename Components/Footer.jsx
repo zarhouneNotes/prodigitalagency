@@ -1,79 +1,83 @@
-"use client";
-import { Box, Container, Typography, Stack } from "@mui/material";
-import { grey } from "@mui/material/colors";
-import Link from "next/link";
+import React from "react";
+import { Box, Typography, Link, Stack, Divider } from "@mui/material";
+import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
 
 export default function Footer() {
   return (
     <Box
       component="footer"
       sx={{
-        backgroundColor: "black",
-        py: 6,
-        // mt: 8,
-        // borderTop: "1px solid #e0e0e0",
+        bgcolor: "grey.900",
+        color: "grey.100",
+        py: 8,
+        px: { xs: 3, md: 8 },
       }}
     >
-      <Container
-        maxWidth="lg"
-        sx={{
-          display: "flex",
-          flexDirection: { xs: "column", sm: "row" },
-          justifyContent: "space-between",
-          alignItems: { xs: "flex-start", sm: "center" },
-          gap: { xs: 4, sm: 0 },
-        }}
+      <Stack
+        direction={{ xs: "column", md: "row" }}
+        justifyContent="space-between"
+        spacing={{ xs: 6, md: 4 }}
+        alignItems={{ xs: "flex-start", md: "flex-start" }}
       >
-        {/* Left: Info */}
+        {/* About / Summary */}
         <Box sx={{ maxWidth: 400 }}>
-          <Typography variant="h6" sx={{ fontWeight: 600, mb: 1 }} color="info">
-            Dr. Dounia Chehaibou
+          <Typography variant="h5" gutterBottom fontWeight="bold">
+            Pro Digital Agency
           </Typography>
-          <Typography variant="body2" color="info.dark">
-            Spécialiste en médecine esthétique, anti-âge et laser médical à
-            Marrakech. Le Dr Chehaibou propose des traitements modernes,
-            sûrs et personnalisés pour sublimer la beauté naturelle.
+          <Typography variant="body2" color="grey.300">
+            Cabinet de formation et d’accompagnement en marketing digital aidant entreprises, entrepreneurs et professionnels à développer leurs compétences et maîtriser les leviers du digital.
           </Typography>
         </Box>
 
-        {/* Right: Navigation Links */}
-        <Stack
-          direction={{ xs: "column", sm: "row" }}
-          spacing={3}
-          sx={{ alignItems: { xs: "flex-start", sm: "center" } }}
-        >
-          {[{ label :   "Accueil" , to  : '/'},
-                   { label : "Services" , to : "/services"}, 
-                   { label :  "Blog" , to :'/blog'}, 
-                   { label : "À propos" , to : "/apropos" }].map((item) => (
-            <Link
-              key={item.label}
-              // component={NextLink}
-              href={`${item.to}`}
-              // underline="none"
-              // color="info"
-             
-              style={{
-                color :grey[600] , 
+        {/* Contact */}
+        <Box>
+          <Typography variant="h6" gutterBottom fontWeight="medium">
+            Contact
+          </Typography>
+          <Stack spacing={1}>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <FiPhone size={16} />
+              <Link href="tel:+212661235749" color="inherit" underline="hover">
+                +212 661 235749
+              </Link>
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <FiMail size={16} />
+              <Link href="mailto:prodigitalagency22@gmail.com" color="inherit" underline="hover">
+                prodigitalagency22@gmail.com
+              </Link>
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+              <FiMapPin size={16} />
+              <Typography variant="body2" color="grey.300">
+                45 rue De l'Atlas N10 Maarif, au-dessus de La Colombe d'Or
+              </Typography>
+            </Box>
+          </Stack>
+        </Box>
 
+        {/* Links */}
+        <Box>
+          <Typography variant="h6" gutterBottom fontWeight="medium">
+            Liens
+          </Typography>
+          <Stack spacing={1}>
+            <Link href="#" color="inherit" underline="hover">Accueil</Link>
+            <Link href="#" color="inherit" underline="hover">Formations</Link>
+            <Link href="#" color="inherit" underline="hover">Blog</Link>
+            <Link href="#" color="inherit" underline="hover">À propos</Link>
+            <Link href="#" color="inherit" underline="hover">Contact</Link>
+          </Stack>
+        </Box>
+      </Stack>
 
-                fontWeight: 500,
-                transition: "color 0.3s ease",
-                "&:hover": { color: "primary.main" },
-                "&:active" : {color : "yellow"} , 
-                textDecoration : 'inherit'
-              }}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </Stack>
-      </Container>
+      {/* Divider */}
+      <Divider sx={{ my: 6, borderColor: "grey.800" }} />
 
-      {/* Bottom Copyright */}
-      <Box sx={{ textAlign: "center", mt: 4 }}>
-        <Typography variant="body2" color="info.dark">
-          © {new Date().getFullYear()} Dr. Dounia Chehaibou — Tous droits réservés.
+      {/* Copyright */}
+      <Box textAlign="center">
+        <Typography variant="body2" color="grey.500">
+          &copy; {new Date().getFullYear()} Pro Digital Agency. Tous droits réservés.
         </Typography>
       </Box>
     </Box>

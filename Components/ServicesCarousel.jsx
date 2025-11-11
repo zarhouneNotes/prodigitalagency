@@ -11,48 +11,32 @@ import { MdArrowForward } from "react-icons/md";
 
 export default function ServicesCarousel( ) {
     const theme  = useTheme()
-    const homepageServices = [
-        {
-          img: 'https://www.globalclinic.be/images/medecine-esthtetique-1.webp',
-          title: 'Médecine Esthétique Globale',
-          desc: 'Des solutions personnalisées pour sublimer votre visage et votre corps, grâce à des traitements innovants et sûrs.',
-          features: [
-            'Rajeunissement et embellissement du visage',
-            'Soins corporels et sculptants',
-            'Technologies modernes et non invasives'
-          ]
-        },
-        {
-          img: 'https://i0.wp.com/drmariemilan.com/wp-content/uploads/2024/03/mesotherapie-crop.jpg?w=600&ssl=1',
-          title: 'Rajeunissement Naturel',
-          desc: 'Des techniques régénératives pour redonner éclat, tonicité et hydratation à votre peau.',
-          features: [
-            'Mésothérapie et Microneedling',
-            'PRP, Exosomes et Biostimulateurs',
-            'Cellules souches pour une régénération naturelle'
-          ]
-        },
-        {
-          img: 'https://eu-images.contentstack.com/v3/assets/blt5088c07559fc83f1/bltba2fe03e5562a915/67775f65ec35032381f9d7c3/shutterstock_425042167-1.jpg?width=1908&height=1274&format=webp&quality=80',
-          title: 'Soins Intimes et Capillaires',
-          desc: 'Des traitements spécialisés pour votre bien-être intime et la vitalité de vos cheveux.',
-          features: [
-            'Laser gynécologique pour confort et tonicité',
-            'Stimuler la repousse et renforcer la chevelure',
-            'Solutions personnalisées et efficaces'
-          ]
-        },
-        {
-          img: 'https://picsum.photos/300/200?random=14',
-          title: 'Performance et Vitalité',
-          desc: 'Des soins pour revitaliser votre corps et booster votre énergie au quotidien.',
-          features: [
-            'Vitaminothérapie intraveineuse et perfusions revitalisantes',
-            'Hydratation, détoxification et énergie',
-            'Bien-être général et éclat naturel'
-          ]
-        }
-      ];
+    const homepageServices =  [
+      {
+        id: 1,
+        title: "Techniques de vente",
+        description:
+          "Apprenez à maîtriser les méthodes de vente modernes : prospection, argumentaire, négociation et fidélisation client. Une formation conçue pour renforcer votre confiance et améliorer vos performances commerciales, que vous soyez débutant ou professionnel expérimenté.",
+        img: "https://images.pexels.com/photos/5239812/pexels-photo-5239812.jpeg", // chemin exemple
+        cta: "Découvrir la formation",
+      },
+      {
+        id: 2,
+        title: "Marketing digital",
+        description:
+          "Développez vos compétences dans le monde numérique : stratégies de contenu, réseaux sociaux, publicité en ligne, SEO et analyse de données. Idéal pour les entrepreneurs et les entreprises souhaitant renforcer leur présence en ligne.",
+        img: "https://images.pexels.com/photos/6476187/pexels-photo-6476187.jpeg",
+        cta: "Voir le programme",
+      },
+      {
+        id: 3,
+        title: "E-commerce",
+        description:
+          "Apprenez à créer, gérer et optimiser une boutique en ligne performante. De la création du site jusqu’à la gestion des ventes, du référencement et de la relation client, cette formation vous guide vers la réussite de votre activité en ligne.",
+        img: "https://images.pexels.com/photos/6214452/pexels-photo-6214452.jpeg",
+        cta: "Commencer la formation",
+      },
+    ];;
       
   return (
     <Box sx={{backgroundColor: "#f9f9f9" , py : 14 }}>
@@ -65,74 +49,17 @@ export default function ServicesCarousel( ) {
         align="center"
         sx={{ color: "text.secondary", maxWidth: 800 , mx: "auto"  , p : 2}}
       >
-        Découvrez l’ensemble des soins proposés par notre cabinet de médecine esthétique et anti-âge à Marrakech, conçus pour sublimer votre beauté naturelle et votre bien-être.
+      Des parcours pratiques et adaptés pour renforcer vos compétences
+      en vente, marketing digital et e-commerce. Apprenez avec des experts
+      du terrain et développez des savoir-faire concrets pour réussir vos projets.
       </Typography>
        
     </Box>
-    {/* <Box
-      sx={{
-          m : 1 ,
-        overflowX: "auto",
-        display: "flex",
-        gap: 3,
-        py: 4,
-        px: { xs: 2, md: 8 },
-        scrollSnapType: "x mandatory",
-        "&::-webkit-scrollbar": { display: "none" }, // hide scrollbar
-    }}
-    >
-
-        
-      {services.map((service, idx) => (
-        <Card
-          key={idx}
-          sx={{
-            width: { xs: "230px", sm: "300px", md: "350px" },
-            flexShrink: 0,
-            scrollSnapAlign: "start",
-            // borderRadius: 3,
-            // boxShadow: 3,
-        }}
-        >
-          <CardMedia
-            component="img"
-            height="180"
-            image={service.img}
-            alt={service.title}
-          />
-          <CardContent>
-            <Typography
-                color={theme.palette.primary.dark}
-                variant="h6"
-              component="div"
-              sx={{ fontWeight: "bold", mb: 1 }}
-            >
-              {service.title}
-            </Typography>
-            <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-              {service.desc}
-            </Typography>
-
-            <Stack spacing={0.5}>
-              {service.features.map((feature, i) => (
-                  <Typography
-                  key={i}
-                  variant="body2"
-                  sx={{ fontSize: "0.85rem", color: "#555" }}
-                >
-                  • {feature}
-                </Typography>
-              ))}
-            </Stack>
-          </CardContent>
-        </Card>
-      ))}
-    </Box> */}
-
+    
    <Box
       sx={{
         display: "grid",
-        gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", md: "repeat(4, 1fr)" },
+        gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", md: "repeat(3, 1fr)" },
         gap: 2,
         px: { xs: 2, md: 10 },
         // py: 6,
@@ -153,12 +80,13 @@ export default function ServicesCarousel( ) {
             display: "flex",
             flexDirection: "column",
             justifyContent : "space-between" ,
+            border  : '2px dashed purple'
             // boxShadow : "unset"
           }}
         >
           <CardMedia
             component="img"
-            height="200"
+            height="240"
             image={service.img}
             alt={service.title}
             // sx={{ borderTopLeftRadius: 12, borderTo'''pRightRadius: 12 }}
@@ -176,12 +104,12 @@ export default function ServicesCarousel( ) {
               color="text.secondary"
               sx={{ mb: 2 }}
             >
-              {service.desc}
+              {service.description}
             </Typography>
 
             {/* --- Features --- */}
 
-            <Stack spacing={1}>
+            {/* <Stack spacing={1}>
               {service.features.map((feature, i) => (
                 <Typography
                  color="text.secondary"
@@ -194,7 +122,7 @@ export default function ServicesCarousel( ) {
 
                 </Typography>
               ))}
-            </Stack>
+            </Stack> */}
           </CardContent>
           <Link href={'/services'} style={{ margin : "0px auto" , marginTop :"auto"}} >
           <Button   size="small" variant="text" sx={{mx : "auto" , my : 2 , marginTop : 'auto'}} endIcon={<MdArrowForward /> } >

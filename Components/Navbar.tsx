@@ -1,5 +1,5 @@
 "use client"
-import React from "react";
+import React, { useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
@@ -11,14 +11,27 @@ import List from "@mui/material/List";
 import ListItemText from "@mui/material/ListItemText";
 import Box from "@mui/material/Box";
 import { MdMenu } from "react-icons/md";
-import { Divider, ListItem, Stack, useTheme } from "@mui/material";
+import { Divider, ListItem, Stack, useMediaQuery, useTheme } from "@mui/material";
 import { grey, pink } from "@mui/material/colors";
 import { BiArrowFromLeft, BiArrowToRight } from "react-icons/bi";
 import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const MyNavbar = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const theme = useTheme()
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
+  const path = usePathname()
+
+  // useEffect(()=>{
+  //   console.log(path)
+  // }, [path])
+  
+
+  function isActive (p:String):boolean {
+    return p == path
+  }
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -26,18 +39,20 @@ const MyNavbar = () => {
 
   const navItems = [{ label :   "Accueil" , to  : '/'},
                    { label : "Services" , to : "/services"}, 
+                  //  { label : "Méthodologie" , to : "/methodologie"}, 
                    { label :  "Blog" , to :'/blog'}, 
-                   { label : "À propos" , to : "/apropos" }];
+                   { label : "À propos" , to : "/apropos" }
+                  ];
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2, fontFamily: "Poppins" , color : theme.palette.primary.main }}>
-        Clinique Éclat
-      </Typography>
+      <img src={"/images/logo.png"}  alt="pro digital agency" width={90} style={{margin : "20px"}} />
+
+   
       <Divider />
-      <List sx={{display : 'flex' , flexDirection : "column" , gap :4 , alignItems : "center" , mt:4}}>
+      <List sx={{display : 'flex' , flexDirection : "column" , gap :2 , alignItems : "" , mx : 5 , mt:"20px"}}>
         {navItems.map((item) => (
-               <Link href={item.to} style={{ color: grey[600] , textDecoration : "none"  , textAlign : "center" }}>
+               <Link href={item.to} style={{color : isActive(item.to) ? theme.palette.primary.main   :   grey[800] , paddingBottom : 20 , textDecoration : "none"  , textAlign : "center" , borderBottom : '2px solid' , borderColor : theme.palette.primary.main }}>
                {/* <Button
                
                  key={item.label}
@@ -60,8 +75,8 @@ const MyNavbar = () => {
         <Link href={'/contact'}>
               <Button
                   endIcon={<BiArrowToRight />}
-                  variant="outlined"
-                  color="secondary"
+                  variant="contained"
+                  color="primary"
                   sx={{
                     fontFamily: "Poppins",
                     // color: "#d17b88",
@@ -94,8 +109,7 @@ const MyNavbar = () => {
         }}
       >
         <Toolbar sx={{ justifyContent: "space-between"  }}>
-          <Stack direction={'row'} alignItems={"center"}>
-            {/* <img src={"/images/dcm.png"} width={"50px"}/> */}
+          {/* <Stack direction={'row'} alignItems={"center"}>
              <Typography
 
             variant="h6"
@@ -108,26 +122,30 @@ const MyNavbar = () => {
           >
             DR.DOUNIA CABINET
           </Typography>
-          </Stack>
+          </Stack> */}
           {/* LOGO */}
+        <img src={"/images/logo.png"}  alt="pro digital agency" width={ isMobile ? 100 : 130}  />
+
          
 
           {/* NAV ITEMS DESKTOP */}
-          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 6 ,  alignItems : "center" }}>
+          <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 ,  alignItems : "center" }}>
             {navItems.map((item) => (
               <Link href={item.to} style={{ color: grey[600] , textDecoration : "none"  }}>
-                {/* <Button
-                
+                <Button
+                  
                   key={item.label}
                   sx={{
                     fontFamily: "Poppins",
-                   ,
+                    color : isActive(item.to) ? 'primary' : 'inherit' ,
                     textTransform: "none",
-                    "&:hover": { color: theme.palette.primary.main , bgcolor : 'transparent' },
+                    "&:hover": { color: theme.palette.primary.main , bgcolor : 'transparent' ,  transition  : "0.4s"},
+                
+                    transition  : "0.4s"
                   }}
-                > */}
+                >
                   {item.label}
-                {/* </Button> */}
+                </Button>
               </Link>
             ))}
 

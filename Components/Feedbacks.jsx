@@ -7,16 +7,19 @@ import { TbQuoteFilled } from "react-icons/tb";
 export default function FeedbackSection() {
   const feedbacks = [
     {
-      name: "Sofia L.",
-      text: "Une expérience incroyable ! La Dr. Chehaibou est très professionnelle et douce. Les résultats sont naturels et je me sens plus confiante que jamais.",
+      id: 1,
+      name: "Sarah Benali",
+      text: "La formation en marketing digital m'a permis de mieux comprendre les stratégies en ligne et d'appliquer immédiatement des techniques efficaces pour mon entreprise. Je recommande vivement !",
     },
     {
-      name: "Nadia M.",
-      text: "J’ai adoré le suivi personnalisé et la qualité des soins. Le cabinet est moderne, propre et très accueillant. Je recommande sans hésiter.",
+      id: 2,
+      name: "Omar El Fassi",
+      text: "La formation en e-commerce est très complète et pratique. Les exercices et cas réels m'ont beaucoup aidé à lancer ma boutique en ligne avec confiance.",
     },
     {
-      name: "Yasmine R.",
-      text: "Des traitements à la pointe et une approche humaine. Je suis ravie de mes résultats et de l’accompagnement du début à la fin.",
+      id: 3,
+      name: "Leila Ait Ahmed",
+      text: "La formation sur les techniques de vente m'a donné les outils nécessaires pour améliorer ma prospection et mes négociations. Les formateurs sont très pédagogues et à l'écoute.",
     },
   ];
 
@@ -31,7 +34,7 @@ export default function FeedbackSection() {
     >
       {/* --- Title & Subtitle --- */}
       <Typography variant="h4" fontWeight="bold" mb={1} color="primary.dark">
-        Témoignages de Nos Patients
+        Témoignages de Nos Clients
       </Typography>
       <Typography
         variant="subtitle1"
@@ -40,8 +43,8 @@ export default function FeedbackSection() {
         maxWidth="600px"
         mx="auto"
       >
-        Découvrez ce que nos patientes disent de leur expérience au cabinet —
-        des soins personnalisés, des résultats naturels et une écoute attentive.
+        Apprenez de l’expérience de nos participants
+       Des histoires inspirantes de ceux qui ont suivi nos programmes
       </Typography>
 
       {/* --- Feedback Cards --- */}
