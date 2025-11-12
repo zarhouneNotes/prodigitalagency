@@ -38,9 +38,9 @@ const MyNavbar = () => {
   };
 
   const navItems = [{ label :   "Accueil" , to  : '/'},
-                   { label : "Services" , to : "/services"}, 
+                   { label : "Nos Formations" , to : "/formations"}, 
                   //  { label : "Méthodologie" , to : "/methodologie"}, 
-                   { label :  "Blog" , to :'/blog'}, 
+                   { label :  "Méthodologie" , to :'/methodologie'}, 
                    { label : "À propos" , to : "/apropos" }
                   ];
 
@@ -131,7 +131,7 @@ const MyNavbar = () => {
           {/* NAV ITEMS DESKTOP */}
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 3 ,  alignItems : "center" }}>
             {navItems.map((item) => (
-              <Link href={item.to} style={{ color: grey[600] , textDecoration : "none"  }}>
+              <Link href={item.to} key={item.to} style={{ color: grey[600] , textDecoration : "none"  }}>
                 <Button
                   
                   key={item.label}

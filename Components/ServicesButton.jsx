@@ -8,7 +8,7 @@ import { MdCategory } from 'react-icons/md'
 function ServicesButton({color}) {
   return (
     <>
-        <Link  href={'/services'}>
+        <Link  href={'/formations'}>
         {/* <CtaButton color={color} vr={vr}  content={'Contactez-nous'} endIcon={<BsArrowFromLeft />} /> */}
             <Button color={ color ? color :   'info'} variant='outlined' endIcon={ <BiCategory />} >
             Voir nos formations

@@ -37,7 +37,7 @@ export default function RootLayout({
         <MyNavbar />
          {children}
          {/* <Box  bgcolor={"grey"}  >HEY</Box> */}
-         {/* <Footer /> */}
+         <Footer />
        </Providers>
       </body>
     </html>

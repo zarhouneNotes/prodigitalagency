@@ -1,6 +1,8 @@
 "use client";
 import { Box, Typography, Grid, Card, CardContent, Button, Stack } from "@mui/material";
 import { grey } from "@mui/material/colors";
+import Link from "next/link";
+import { FcFeedback } from "react-icons/fc";
 import { TbQuoteFilled } from "react-icons/tb";
 // import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 
@@ -91,14 +93,17 @@ export default function FeedbackSection() {
       </Grid>
 
       {/* --- CTA Button --- */}
+      <Link href={'/contact'}>
       <Button
         variant="contained"
         color="primary"
         size="large"
         sx={{ mt: 6, px: 4, borderRadius: 8 }}
+        endIcon={<FcFeedback />}
       >
         Laisser un Avis
       </Button>
+      </Link>
     </Box>
   );
 }

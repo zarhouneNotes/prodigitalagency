@@ -95,9 +95,9 @@ export default function WhyUsSection() {
             <CardMedia
                   sx={{ height: 200  }}
                   image={it.src}
-                  title="green iguana"
+                  title="pro digital agency "
                 />
-              <Typography variant="" component="h3" gutterBottom>
+              <Typography variant="" component="h3" gutterBottom color="primary.dark">
                 {it.title}
               </Typography>
               <Typography variant="body2" color="text.secondary"  sx={{  }}>
@@ -105,9 +105,9 @@ export default function WhyUsSection() {
               </Typography>
 
               {/* optional CTA aligned bottom-left */}
-              <Box sx={{ mt: "auto" }}>
+              {/* <Box sx={{ mt: "auto" }}>
                 <Button size="small">{it.cta ?? "En savoir plus"}</Button>
-              </Box>
+              </Box> */}
             </CardContent>
           </Card>
         ))}

@@ -42,7 +42,7 @@ export default function ServicesCarousel( ) {
     <Box sx={{backgroundColor: "#f9f9f9" , py : 14 }}>
     <Box pb={8}>
         <Typography color="primary.dark" variant="h4" align="center" sx={{  fontWeight: "bold" }}>
-            Nos Services
+            Nos Formations
         </Typography>
         <Typography
         variant="subtitle1"
@@ -124,7 +124,7 @@ export default function ServicesCarousel( ) {
               ))}
             </Stack> */}
           </CardContent>
-          <Link href={'/services'} style={{ margin : "0px auto" , marginTop :"auto"}} >
+          <Link href={'/formations'} style={{ margin : "0px auto" , marginTop :"auto"}} >
           <Button   size="small" variant="text" sx={{mx : "auto" , my : 2 , marginTop : 'auto'}} endIcon={<MdArrowForward /> } >
             Voir plus
           </Button>

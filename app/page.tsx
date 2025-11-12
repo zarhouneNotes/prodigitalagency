@@ -21,7 +21,7 @@ export default function Home() {
         <FeedbackSection />
         {/* <GallerySection /> */}
         <CTASection />
-        <Footer />
+        {/* <Footer /> */}
     </>
   );
 }
