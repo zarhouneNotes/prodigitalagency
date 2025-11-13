@@ -1,6 +1,7 @@
 import { CheckBox } from '@mui/icons-material'
 import { Box, Button, Stack, Typography, useTheme } from '@mui/material'
 import { grey } from '@mui/material/colors'
+import Link from 'next/link'
 import React from 'react'
 import { FaSchoolCircleExclamation } from 'react-icons/fa6'
 
@@ -14,7 +15,7 @@ function Meth() {
         spacing={6}
         alignItems="center"
         sx={{
-          mb: { xs: 10, md: 14 },
+          
           textAlign: { xs: "center", md: "left" }, bgcolor :'white' , 
           p : 4
         }}
@@ -66,20 +67,22 @@ function Meth() {
             ))}
           </Stack>
 
-          <Button
-            variant="outlined"
-            color="primary"
-            sx={{
-              mt: 4,
-              borderRadius: "25px",
-              px: 4,
-              py: 1.2,
-              textTransform: "none",
-              fontWeight: 600,
-            }}
-          >
-            Découvrir le déroulement complet
-          </Button>
+          <Link href={"/contact"}>
+            <Button
+                variant="outlined"
+                color="primary"
+                sx={{
+                mt: 4,
+                borderRadius: "25px",
+                px: 4,
+                py: 1.2,
+                textTransform: "none",
+                fontWeight: 600,
+                }}
+            >
+                Découvrir le déroulement complet
+            </Button>
+          </Link>
         </Box>
 
         {/* Illustration à droite */}
@@ -101,6 +104,84 @@ function Meth() {
         </Box>
       </Stack>
 
+
+
+      <Box
+  sx={{
+    my: { xs: 7, md: 14 },
+    py: { xs: 8, md: 12 },
+    // px: { xs: 3, md: 8 },
+    backgroundColor: "primary.dark",
+    boxShadow: "0 8px 25px rgba(0,0,0,0.05)",
+    textAlign: "center",
+    // color :"white"
+  }}
+>
+  <Typography
+    variant="h4"
+    sx={{
+      fontWeight: 700,
+      color: theme.palette.info.main,
+      mb: 3,
+    }}
+  >
+    Un encadrement professionnel et humain
+  </Typography>
+
+  <Typography
+    variant="body1"
+    sx={{
+      maxWidth: 850,
+      mx: "auto",
+      lineHeight: 1.8,
+      color: grey[300],
+      mb: 4,
+    }}
+  >
+    Toutes nos formations sont encadrées par des{" "}
+    <strong>professionnels expérimentés du marketing digital, de la vente et du e-commerce</strong>.
+    Leur mission est de vous transmettre des compétences concrètes et immédiatement
+    applicables dans votre activité, tout en vous guidant à chaque étape de votre
+    apprentissage.
+  </Typography>
+
+  <Typography
+    variant="body2"
+    sx={{
+      maxWidth: 800,
+      mx: "auto",
+      lineHeight: 1.8,
+      color: grey[400],
+      mb: 4,
+    }}
+  >
+    Grâce à leur accompagnement, vous bénéficiez d’une formation riche,
+    ancrée dans la réalité du marché et adaptée à vos objectifs professionnels.
+  </Typography>
+
+  {/* Espace réservé à une image (optionnelle) */}
+  <Box
+    sx={{
+
+      mt: 4,
+      width: "100%",
+      maxWidth: 700,
+      mx: "auto",
+      borderRadius: "16px",
+      overflow: "hidden",
+      boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+    }}
+  >
+    {/* <img
+      src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg"
+      alt="Encadrement professionnel"
+      width={800}
+      height={450}
+      style={{ width: "100%", height: "auto", objectFit: "cover" }}
+    /> */}
+  </Box>
+</Box>
+
       {/* === SECTION 2 : CERTIFICATION === */}
       <Stack
         direction={{ xs: "column-reverse", md: "row" }}
@@ -109,7 +190,7 @@ function Meth() {
         sx={{
           textAlign: { xs: "center", md: "left" },
           backgroundColor: theme.palette.background.default,
-          py: { xs: 6, md: 8 },
+          py: { xs: 2, md: 8 },
           px: { xs: 2, md: 4 },
           borderRadius: "0px",
           boxShadow: "0 8px 20px rgba(0,0,0,0.05)",
@@ -166,6 +247,8 @@ function Meth() {
             digital, le e-commerce ou la communication.
           </Typography>
 
+
+          <Link href={"/contact"}>
           <Button
             variant="contained"
             color="primary"
@@ -179,8 +262,14 @@ function Meth() {
           >
             En savoir plus sur la certification
           </Button>
+          </Link>
+            
         </Box>
       </Stack>
+
+      {/* === SECTION 3 : ENCADREMENT PROFESSIONNEL === */}
+
+
     </Box>
   ) }
 

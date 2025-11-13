@@ -33,14 +33,14 @@ export default function QuoteSection() {
             lineHeight: 1.6,
           }}
         >
-          “Sublimer la beauté naturelle, sans excès, avec précision et
-          bienveillance.”
+          “Imaginez convertir chaque opportunité en vente !
+        C’est exactement ce que notre formation en techniques de vente et commercialisation”
         </Typography>
         <Typography
           variant="subtitle1"
           sx={{ fontWeight: "bold", color: "#fff" }}
         >
-          — Dr Chehaibou Dounia
+          — Directrice  Amina
         </Typography>
       </Container>
     </Box>

@@ -14,9 +14,9 @@ export default function AboutPage() {
           gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
           gap: 6,
           alignItems: "center",
-          mb: 10,
+          // mb: 10,
           bgcolor : '#fff' , 
-          p : { md  : 10 , xs : 2} , 
+          p : { md  : 10 , xs : 1} , 
           width :{md :  "90vw" , xs : "100vw"} , 
           mx :'auto',
           pb : 0
@@ -27,48 +27,62 @@ export default function AboutPage() {
             variant="h3"
             fontWeight={700}
             color="primary.dark"
-            mb={2}
+            mb={4}
           >
-            À propos du Dr Chehaibou Dounia
+            À propos du Pro Digital Agency
           </Typography>
-          <Typography variant="body1" color="text.secondary" mb={3}>
-             Dr Chehaibou Dounia est une médecin spécialisée en médecine
-            esthétique, anti-âge et laser médical, reconnue pour son approche
-            globale et naturelle du rajeunissement. Alliant expertise
-            scientifique et technologie de pointe, elle propose des traitements
-            personnalisés pour sublimer la beauté du visage et du corps tout en
-            respectant l’harmonie et la singularité de chaque patient.
+          <Typography
+            variant="body1"
+            sx={{
+              color: "secondary.main",
+              lineHeight: 1.8,
+              mb: 2,
+            }}
+          >
+            Pro Digital Agency est un cabinet de formation et d’accompagnement en marketing digital qui aide les entreprises, entrepreneurs et professionnels à développer leurs compétences et à maîtriser l’ensemble des leviers du digital.
+
+Nous proposons des parcours complets et pratiques qui couvrent toutes les dimensions du marketing numérique :
+
+Référencement naturel (SEO) pour améliorer la visibilité sur les moteurs de recherche,
+
+Publicité en ligne (Google Ads, Meta Ads, etc.) pour atteindre efficacement votre audience,
+
+Réseaux sociaux pour construire une communauté engagée et renforcer votre image de marque,
+
+Analyse de performance (Data & KPIs) pour suivre, comprendre et optimiser vos résultats.
           </Typography>
-          <Typography variant="body1" color="text.secondary">
-            Grâce à sa formation approfondie en médecine esthétique et à une
-            maîtrise des techniques injectables, lasers et biostimulantes, le Dr
-            Chehaibou met un point d’honneur à offrir des résultats naturels,
-            sûrs et durables. Sa philosophie repose sur l’écoute, la précision
-            et la transparence, afin d’accompagner chaque patient dans un
-            parcours de soin sur mesure.
+          <Typography
+            variant="body1"
+            sx={{
+              color: "secondary.dark",
+              lineHeight: 1.8,
+            }}
+          >
+            Notre mission est de rendre le digital accessible et performant pour chaque profil, en combinant une approche pédagogique, une expertise technique et un accompagnement personnalisé.
+{/* Que vous soyez débutant ou déjà actif dans le domaine, nous vous guidons pas à pas vers une maîtrise concrète et opérationnelle du marketing digital moderne. */}
           </Typography>
           <StatsSection />
 
         </Box>
 
         <Box
-        justifySelf={'flex-end'}
-          component="img"
-          src="/images/dr.jpeg"
-          alt="Dr Chehaibou Dounia"
-          sx={{
-            width: { md : "80%" , xs : '100%'},
-            // borderRadius: 4,
-            boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
-            objectFit: "cover",
-            // aspectRatio : '1/1'
-            mb : 2 
-          }}
-        />
-      </Box>
+          justifySelf={'flex-end'}
+            component="img"
+            src="/images/rec.png"
+            alt="Dr Chehaibou Dounia"
+            sx={{
+              width: { md : "80%" , xs : '100%'},
+              // borderRadius: 4,
+              boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
+              objectFit: "cover",
+              // aspectRatio : '1/1'
+              mb : 2 
+            }}
+          />
+        </Box>
 
       {/* Section 2 – Le Cabinet */}
-      <Box
+      {/* <Box
         sx={{
           display: "grid",
           gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
@@ -141,7 +155,7 @@ export default function AboutPage() {
 
 
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 }

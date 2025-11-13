@@ -2,7 +2,7 @@
 import { Box, Typography, Card, CardMedia, CardContent, Button } from "@mui/material";
 import Masonry from "@mui/lab/Masonry";
 import Link from "next/link";
-import { grey } from "@mui/material/colors";
+import { grey, purple } from "@mui/material/colors";
 import Meth from "@/Components/Meth";
 
 const blogPosts = Array.from({ length: 4 }, (_, i) => ({
@@ -70,7 +70,7 @@ export default function page() {
        py: 8,
        px: 3,
        textAlign: "center",
-       bgcolor: "#fce4ec", // soft pink background
+       bgcolor: purple[100], // soft pink background
        // borderRadius: 3,
        // mx: 2,
      }}
@@ -94,7 +94,7 @@ export default function page() {
     Une approche claire, structurée et adaptée à vos besoins pour progresser sereinement dans le digital.
      </Typography>
 
-     <Link href="/services" passHref legacyBehavior>
+     <Link href="/formations" passHref legacyBehavior>
        <Button
          variant="contained"
          color="primary"

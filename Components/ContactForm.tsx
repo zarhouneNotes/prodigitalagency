@@ -1,132 +1,241 @@
 "use client";
-import { Box, Typography, TextField, Button } from "@mui/material";
 
-export default function ContactSection() {
+import { Box, Typography, TextField, Button, MenuItem, Stack } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import PhoneIcon from "@mui/icons-material/Phone";
+import EmailIcon from "@mui/icons-material/Email";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { grey } from "@mui/material/colors";
+
+const ContactSection = () => {
+  const theme = useTheme();
+
+  const formations = [
+    "Marketing Digital",
+    "Techniques de Vente",
+    "E-commerce",
+  ];
+
   return (
     <Box
       sx={{
-        maxWidth: 1100,
-        mx: "auto",
-        my: 10,
-        px: { xs: 2, md: 6 },
-        py: 6,
-        borderRadius: 4,
-        backgroundColor: "#fff",
-        boxShadow: 4,
+        bgcolor : grey[200] , 
         display: "flex",
         flexDirection: { xs: "column", md: "row" },
-        gap: 6,
+        minHeight: "80vh",
+        overflow: "hidden",
+        // boxShadow: "0 8px 25px rgba(0,0,0,0.08)",
+        py: { xs: 0, md: 10 },
+        px : {md : 10 , xs : 0}
       }}
     >
-      {/* Left: Business Hours */}
-      <Box sx={{ flex: 1 }}>
-        <Typography
-          variant="h5"
-          sx={{ mb: 2, fontWeight: 600, color: "#D81B60" }}
-        >
-          Horaires d’ouverture
+      {/* === COLONNE GAUCHE === */}
+      <Box
+  sx={{
+    flex: 1,
+    background: `linear-gradient(135deg, ${theme.palette.primary.dark} 70%, ${theme.palette.primary.main} 100%)`,
+    color: "white",
+    p: { xs: 5, md: 8 },
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    position: "relative",
+    overflow: "hidden",
+  }}
+>
+  {/* Effets décoratifs */}
+  <Box
+    sx={{
+      position: "absolute",
+      top: -60,
+      left: -60,
+      width: 200,
+      height: 200,
+      borderRadius: "50%",
+      background: "rgba(255,255,255,0.1)",
+      filter: "blur(60px)",
+    }}
+  />
+  <Box
+    sx={{
+      position: "absolute",
+      bottom: -80,
+      right: -80,
+      width: 250,
+      height: 250,
+      borderRadius: "50%",
+      background: "rgba(255,255,255,0.07)",
+      filter: "blur(80px)",
+    }}
+  />
+
+  {/* Contenu */}
+  <Typography
+    variant="h3"
+    sx={{
+      fontWeight: 800,
+      mb: 3,
+      zIndex: 1,
+      position: "relative",
+    }}
+  >
+    Contactez-nous
+  </Typography>
+
+  <Typography
+    variant="body1"
+    sx={{
+      mb: 5,
+      opacity: 0.9,
+      fontSize: "1.1rem",
+      lineHeight: 1.7,
+      zIndex: 1,
+      position: "relative",
+    }}
+  >
+    Nous sommes ravis de vous accompagner dans vos projets digitaux.  
+    Notre équipe est à votre écoute pour toute demande de formation, d’accompagnement ou de collaboration.
+  </Typography>
+
+  <Stack spacing={3} sx={{ zIndex: 1, position: "relative" }}>
+    <Stack direction="row" spacing={2} alignItems="center">
+      <AccessTimeIcon sx={{ color: "white", fontSize: 28 }} />
+      <Box>
+        <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+          Horaires
         </Typography>
+        <Typography>Du lundi au vendredi : 9h00 – 18h00</Typography>
+      </Box>
+    </Stack>
 
-        <Typography sx={{ color: "text.secondary", mb: 3 }}>
-          Retrouvez-nous pendant nos horaires d’ouverture pour toute
-          consultation ou demande d’information.
+    <Stack direction="row" spacing={2} alignItems="center">
+      <PhoneIcon sx={{ color: "white", fontSize: 28 }} />
+      <Box>
+        <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+          Téléphone
         </Typography>
+        <Typography>+212 661 235749</Typography>
+      </Box>
+    </Stack>
 
-        <Box sx={{ lineHeight: 1.8 }}>
-          <Typography>
-            <strong>Lundi – Vendredi :</strong> 9h00 – 19h00
-          </Typography>
-          <Typography>
-            <strong>Samedi :</strong> 9h00 – 13h00
-          </Typography>
-          <Typography>
-            <strong>Dimanche :</strong> Fermé
-          </Typography>
-        </Box>
+    <Stack direction="row" spacing={2} alignItems="center">
+      <EmailIcon sx={{ color: "white", fontSize: 28 }} />
+      <Box>
+        <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+          Email
+        </Typography>
+        <Typography>prodigitalagency22@gmail.com</Typography>
+      </Box>
+    </Stack>
 
-
-
-        <Box
-              sx={{
-                textAlign: "left",
-                py: 6,
-                px: { xs: 2, md: 6 },
-                maxWidth: 900,
-                mx: "auto",
-                bgcolor   :'primary.dark' ,
-                mt: 2
-              }}
-            >
-              <Typography
-                variant="h6"
-                sx={{
-                  color: "info.main",
-                  fontWeight: 500,
-                  lineHeight: 1.6,
-                }}
-              >
-                Ne laissez pas le temps marquer votre peau – rejoignez notre centre dès maintenant et découvrez des solutions esthétiques sûres et efficaces pour un rajeunissement visible !
-                  </Typography>
-            </Box>
-
-        <Typography
-          sx={{
-            mt: 4,
-            color: "text.secondary",
-            fontSize: 14,
-            fontStyle: "italic",
-          }}
-        >
-          Nous vous accueillons avec ou sans rendez-vous selon disponibilité.
+    <Stack direction="row" spacing={2} alignItems="center">
+      <LocationOnIcon sx={{ color: "white", fontSize: 28 }} />
+      <Box>
+        <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
+          Adresse
+        </Typography>
+        <Typography>
+          45 rue De l'Atlas N10 Maarif,
+          <br /> au-dessus de La Colombe d'Or
         </Typography>
       </Box>
+    </Stack>
+  </Stack>
 
-      {/* Right: Contact Form */}
-      <Box sx={{ flex: 1 }}>
+  {/* Phrase inspirante en bas */}
+  <Typography
+    variant="body2"
+    sx={{
+      mt: 6,
+      fontStyle: "italic",
+      opacity: 0.8,
+      textAlign: "left",
+      zIndex: 1,
+      position: "relative",
+    }}
+  >
+    “Le digital est une aventure humaine avant tout — avançons ensemble.”
+  </Typography>
+</Box>
+
+
+      {/* === COLONNE DROITE (FORMULAIRE) === */}
+      <Box
+        sx={{
+          flex: 1,
+          backgroundColor: "white",
+          p: { xs: 4, md: 6 },
+          display: "flex",
+          flexDirection: "column",
+          // justifyContent: "stretch",
+        }}
+      >
         <Typography
           variant="h5"
-          sx={{ mb: 1, fontWeight: 600, color: "#D81B60" }}
-        >
-          Contactez-nous
-        </Typography>
-        <Typography sx={{ mb: 3, color: "text.secondary", fontSize: 15 }}>
-          Remplissez le formulaire ci-dessous et notre équipe vous répondra
-          dans les plus brefs délais.
-        </Typography>
-
-        <Box
-          component="form"
           sx={{
-            display: "flex",
-            flexDirection: "column",
-            gap: 2.5,
+            fontWeight: 700,
+            color: theme.palette.primary.main,
+            mb: 3,
+            textAlign: { xs: "center", md: "left" },
           }}
         >
-          <TextField label="Nom complet" variant="outlined" fullWidth />
-          <TextField label="Sujet" variant="outlined" fullWidth />
-          <TextField label="Numéro de téléphone" variant="outlined" fullWidth />
+          Envoyez-nous un message
+        </Typography>
+
+        <Stack
+          component="form"
+          spacing={3}
+          sx={{
+            maxWidth: 500,
+            mx: { xs: "0px", md: 0 },
+          }}
+        >
+          <TextField label="Nom complet" variant="outlined" fullWidth required />
+          <TextField label="Téléphone" variant="outlined" fullWidth required />
+          <TextField label="Email" type="email" variant="outlined" fullWidth required />
           <TextField
-            label="Votre message"
+            select
+            label="Formation intéressé(e)"
             variant="outlined"
+            fullWidth
+            required
+          >
+            {formations.map((formation) => (
+              <MenuItem key={formation} value={formation}>
+                {formation}
+              </MenuItem>
+            ))}
+          </TextField>
+          <TextField
+            label="Message"
             multiline
             rows={4}
+            variant="outlined"
             fullWidth
+            required
           />
+
           <Button
             variant="contained"
+            color="primary"
+            size="large"
             sx={{
               mt: 1,
-              py: 1.2,
-              backgroundColor: "#D81B60",
-              "&:hover": { backgroundColor: "#c2185b" },
+              textTransform: "none",
+              borderRadius: "30px",
               fontWeight: 600,
-              borderRadius: 2,
+              alignSelf: { xs: "center", md: "flex-start" },
+              px: 5,
+              py: 1.5,
             }}
           >
-            Envoyer le message
+            Envoyer
           </Button>
-        </Box>
+        </Stack>
       </Box>
     </Box>
   );
-}
+};
+
+export default ContactSection;

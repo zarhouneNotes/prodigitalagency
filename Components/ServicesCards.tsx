@@ -79,7 +79,7 @@ const FormationsPage = () => {
   ];
 
   return (
-    <Box sx={{ py: { xs: 6, md: 10 }, px: { xs: 2, md: 10 } , bgcolor : grey[200] }}>
+    <Box sx={{ py: { xs: 1, md: 10 }, px: { xs: 1, md: 10 } , bgcolor : grey[200] }}>
       {/* <Typography
         variant="h3"
         align="center"
@@ -93,102 +93,103 @@ const FormationsPage = () => {
         Nos Formations Professionnelles
       </Typography> */}
 
-      <Stack spacing={10}>
+      <Stack spacing={   {md : 10 , xs : 5}}>
         {formations.map((formation, index) => (
            
-            <Box  bgcolor={"white"} p={5} >
-            <Typography textAlign={"center"} fontWeight={'bold'} color="primary.dark"  variant="h3">
+            <Box  bgcolor={"white"}  >
+            <Typography textAlign={"center"} py={4}  fontWeight={'bold'} color="primary.dark"  variant="h3">
               {formation.title} 
             </Typography>
-         <Stack 
-            key={index}
-            direction={{ xs: "column", md: index % 2 === 0 ? "row" : "row-reverse" }}
-            alignItems="center"
-            spacing={6}
-            sx={{
-              transition: "0.3s",
-              "&:hover": { transform: "translateY(-4px)" },
-             
-            }}
-          >
-            <Box
-              sx={{
-                // bgcolor : 'primary.light' ,
-                // flex: 1,
-                width : {md : '50%' , xs : "100%"} ,
-                textAlign: "center",
-                bgcolor :'primary.light',
-                display :'flex' , 
-                alignItems :'center' , 
-                borderRadius :"10px"
-              }}
-            >
-              {/* {formation.icon}
-              <Typography
-                variant="h5"
+            <Stack 
+                key={index}
+                direction={{ xs: "column", md: index % 2 === 0 ? "row" : "row-reverse" }}
+                alignItems="center"
+                spacing={6}
                 sx={{
-                  mt: 2,
-                  fontWeight: 600,
-                  color: theme.palette.text.primary,
+                  transition: "0.3s",
+                  "&:hover": { transform: "translateY(-4px)" },
+                  px : { md :  4 , xs : 1}
+                
                 }}
               >
-                {formation.title}
-              </Typography> */}
+                <Box
+                  sx={{
+                    // bgcolor : 'primary.light' ,
+                    // flex: 1,
+                    width : {md : '50%' , xs : "100%"} ,
+                    textAlign: "center",
+                    bgcolor :'primary.light',
+                    display :'flex' , 
+                    alignItems :'center' , 
+                    borderRadius :"10px"
+                  }}
+                >
+                  {/* {formation.icon}
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      mt: 2,
+                      fontWeight: 600,
+                      color: theme.palette.text.primary,
+                    }}
+                  >
+                    {formation.title}
+                  </Typography> */}
 
-              <img style={{padding: "10px"  }} src={formation.src} alt=""  width={"100%"} height='100%' />
-            </Box>
+                  <img style={{padding: "10px"  }} src={formation.src} alt=""  width={"100%"} height='100%' />
+                </Box>
 
-            <Box sx={{ flex: 2 ,  p : 6 }}>
-              <Typography
-                variant="body1"
-                sx={{ mb: 2, color: theme.palette.text.secondary, lineHeight: 1.7 }}
-              >
-                {formation.description}
-              </Typography>
+                <Box sx={{ flex: 2 ,  p : { md  : 6 , xs : 2 }}}>
+                  <Typography
+                    variant="body1"
+                    sx={{ mb: 2, color: theme.palette.text.secondary, lineHeight: 1.7 }}
+                  >
+                    {formation.description}
+                  </Typography>
 
-              <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1 }}>
-                Objectifs :
-              </Typography>
-              <ul style={{ marginTop: 0, marginBottom: "1rem" }}>
-                {formation.objectifs.map((obj, i) => (
-                  <Box key={i} style={{ marginBottom: "0.4rem" }} sx={{display : 'flex' , alignItems: 'center' , gap : 2 }}>
-                    <FaCheckDouble color={theme.palette.primary.dark} />
-                     <Typography variant="body2" color="text.secondary">
-                      {obj}
+                  <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1 }}>
+                    Objectifs :
+                  </Typography>
+                  <ul style={{ marginTop: 0, marginBottom: "1rem" }}>
+                    {formation.objectifs.map((obj, i) => (
+                      <Box key={i} style={{ marginBottom: "0.4rem" }} sx={{display : 'flex' , alignItems: 'center' , gap : 2 }}>
+                        <FaCheckDouble color={theme.palette.primary.dark}  style={{width :"20px"}}  />
+                        <Typography variant="body2" color="text.secondary">
+                          {obj}
+                        </Typography>
+                      </Box>
+                    ))}
+                  </ul>
+
+                  <Stack direction="row" spacing={3} sx={{ mb: 2, flexWrap: "wrap" }}>
+                    <Typography variant="body2">
+                      <strong>Durée :</strong> {formation.durée}
                     </Typography>
-                  </Box>
-                ))}
-              </ul>
+                    <Typography variant="body2">
+                      <strong>Niveau :</strong> {formation.niveau}
+                    </Typography>
+                  </Stack>
 
-              <Stack direction="row" spacing={3} sx={{ mb: 2, flexWrap: "wrap" }}>
-                <Typography variant="body2">
-                  <strong>Durée :</strong> {formation.durée}
-                </Typography>
-                <Typography variant="body2">
-                  <strong>Niveau :</strong> {formation.niveau}
-                </Typography>
+                  <Typography variant="body2" sx={{ mb: 3 }}>
+                    <strong>Résultat attendu :</strong> {formation.résultats}
+                  </Typography>
+                      <Link href={"/contact"}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    sx={{
+                      borderRadius: "30px",
+                      px: 4,
+                      py: 1.2,
+                      fontWeight: 600,
+                      textTransform: "none",
+                    }}
+                  >
+                    S’inscrire à cette formation
+                  </Button>
+                      </Link>
+                </Box>
               </Stack>
-
-              <Typography variant="body2" sx={{ mb: 3 }}>
-                <strong>Résultat attendu :</strong> {formation.résultats}
-              </Typography>
-                  <Link href={"/contact"}>
-              <Button
-                variant="contained"
-                color="primary"
-                sx={{
-                  borderRadius: "30px",
-                  px: 4,
-                  py: 1.2,
-                  fontWeight: 600,
-                  textTransform: "none",
-                }}
-              >
-                S’inscrire à cette formation
-              </Button>
-                  </Link>
-            </Box>
-          </Stack>
           </Box>
         ))}
       </Stack>

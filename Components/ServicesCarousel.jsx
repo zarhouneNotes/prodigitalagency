@@ -59,7 +59,7 @@ export default function ServicesCarousel( ) {
    <Box
       sx={{
         display: "grid",
-        gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", md: "repeat(3, 1fr)" },
+        gridTemplateColumns: { xs: "1fr", sm: "1fr", md: "repeat(3, 1fr)" },
         gap: 2,
         px: { xs: 2, md: 10 },
         // py: 6,

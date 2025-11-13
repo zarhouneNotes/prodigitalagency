@@ -2,7 +2,7 @@ import ContactCards from '@/Components/ContactCards'
 import ContactForm from '@/Components/ContactForm'
 import QuoteSection from '@/Components/QuoteSection'
 import { Box, Typography } from '@mui/material'
-import { grey } from '@mui/material/colors'
+import { grey, purple } from '@mui/material/colors'
 import React from 'react'
 
 function page() {
@@ -10,7 +10,7 @@ function page() {
     <>
       <Box
         sx={{
-          display: "flex",
+          display: { md : "flex"  , xs : "none"},
           flexDirection: "column",
           // alignItems: "center",
           // justifyContent: "center",
@@ -52,30 +52,35 @@ function page() {
           </Typography>
         </Box>
       </Box>
-      <ContactCards />
+      {/* <ContactCards /> */}
       <ContactForm />
 
-      <Box sx={{ width: "100%" }}>
+      <Box   sx={{ background : purple[100] ,  width: "100%" , display : 'flex' , alignItems : 'center', flexDirection : { md :"row" , xs :'column'}  }}>
       {/* Optional title */}
-      {/* <Typography
+      <Typography
+
         variant="h5"
         sx={{
           textAlign: "center",
           fontWeight: 600,
           color: "#D81B60",
-          // mb: 4,
+          p: 4,
+          width: {md :   "50%" , xs : '100%'},
+         
+
         }}
       >
-        Notre localisation
-      </Typography> */}
+        Passez nous voir au centre Pro Digital Agency, un espace dédié à la formation, à la créativité et à l’innovation digitale.
+      </Typography>
 
       <Box
         sx={{
-          width: "100%",
+          // p  : {md : 10 , xs :0} ,
+          width: {md :   "50%" , xs : '100%'},
           height: { xs: 300, md: 500 },
           overflow: "hidden",
           // borderRadius: 3,
-          boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
+          // boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
         }}
       >
         <iframe
@@ -89,7 +94,7 @@ function page() {
         ></iframe>
       </Box>
     </Box>
-    <QuoteSection />
+    {/* <QuoteSection /> */}
 
 
     </>
