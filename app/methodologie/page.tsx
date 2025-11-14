@@ -98,9 +98,9 @@ export default function page() {
        <Button
          variant="contained"
          color="primary"
-         sx={{ px: 5, py: 1.5, borderRadius: 3, textTransform: "none" }}
+         sx={{  textTransform: "none" }}
        >
-         Voir tous les services
+         Voir nos formations
        </Button>
      </Link>
    </Box>

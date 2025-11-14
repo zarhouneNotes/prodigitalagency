@@ -28,7 +28,7 @@ const FormationsPage = () => {
         "Concevoir une stratégie de contenu efficace (réseaux sociaux, blog, e-mailing)",
         "Analyser la performance de vos actions marketing (Google Analytics, KPI)",
       ],
-      durée: "4 semaines (en ligne ou présentiel)",
+      durée: "6 séances  ( 100% pratique - en ligne ou présentiel)",
       niveau: "Débutant à intermédiaire",
       résultats: "À la fin de cette formation, vous serez capable de gérer une stratégie digitale complète et mesurable.",
       src : '/images/digi.jpg' 
@@ -70,7 +70,7 @@ const FormationsPage = () => {
         "Analyser vos ventes et améliorer votre taux de conversion",
         "Construire une marque forte et identifiable en ligne",
       ],
-      durée: "5 semaines (projet encadré)",
+      durée: "2 mois  (+ 2 ans d'accompagnement)",
       niveau: "Intermédiaire",
       résultats: "Vous saurez gérer un site e-commerce complet, de la création à la stratégie de croissance.",
       src : '/images/ecom.webp' 
@@ -97,7 +97,7 @@ const FormationsPage = () => {
         {formations.map((formation, index) => (
            
             <Box  bgcolor={"white"}  >
-            <Typography textAlign={"center"} py={4}  fontWeight={'bold'} color="primary.dark"  variant="h3">
+            <Typography textAlign={"center"} py={6}  fontWeight={'bold'} color="primary.dark"  variant="h3">
               {formation.title} 
             </Typography>
             <Stack 
@@ -197,7 +197,7 @@ const FormationsPage = () => {
       <Divider sx={{ my: 10 }} />
 
       <Typography
-        variant="body1"
+        variant="body2"
         align="center"
         sx={{
           fontWeight: 500,
@@ -205,6 +205,7 @@ const FormationsPage = () => {
           maxWidth: 700,
           mx: "auto",
           lineHeight: 1.6,
+          pb : 10
         }}
       >
         Toutes nos formations sont conçues pour être **pratiques, flexibles et orientées résultat**.  

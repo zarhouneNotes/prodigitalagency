@@ -40,7 +40,7 @@ export default function QuoteSection() {
           variant="subtitle1"
           sx={{ fontWeight: "bold", color: "#fff" }}
         >
-          — Directrice  Amina
+          — Directrice  Amina ElKissouni
         </Typography>
       </Container>
     </Box>

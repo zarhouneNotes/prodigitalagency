@@ -8,7 +8,7 @@ import { FaSchoolCircleExclamation } from 'react-icons/fa6'
 function Meth() {
     const theme  = useTheme()
   return (
-    <Box component="section" sx={{ py: { xs: 8, md: 12 }, px: { xs: 2, md: 8 }  , bgcolor : grey[200]} }>
+    <Box component="section" sx={{ py: { xs: 0, md: 12 }, px: { xs: 0, md: 8 }  , bgcolor : grey[200]} }>
       {/* === SECTION 1 : COMMENT ÇA SE PASSE === */}
       <Stack
         direction={{ xs: "column", md: "row" }}
@@ -89,9 +89,9 @@ function Meth() {
         <Box
           sx={{
             flex: 1,
-            minHeight: 280,
+            // minHeight: 280,
             overflow: "hidden",
-            boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+            // boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
           }}
         >
           <img
@@ -108,7 +108,7 @@ function Meth() {
 
       <Box
   sx={{
-    my: { xs: 7, md: 14 },
+    my: { xs: 0, md: 14 },
     py: { xs: 8, md: 12 },
     // px: { xs: 3, md: 8 },
     backgroundColor: "primary.dark",
@@ -165,7 +165,7 @@ function Meth() {
 
       mt: 4,
       width: "100%",
-      maxWidth: 700,
+    //   maxWidth: 700,
       mx: "auto",
       borderRadius: "16px",
       overflow: "hidden",
@@ -184,7 +184,7 @@ function Meth() {
 
       {/* === SECTION 2 : CERTIFICATION === */}
       <Stack
-        direction={{ xs: "column-reverse", md: "row" }}
+        direction={{ xs: "column-reverse", md: "row-reverse" }}
         spacing={6}
         alignItems="center"
         sx={{
@@ -199,6 +199,7 @@ function Meth() {
         {/* Image à gauche */}
         <Box
           sx={{
+            display : {xs : "none" , md  :'flex'} , 
             flex: 1,
             // borderRadius: "20px",
             overflow: "hidden",
@@ -238,6 +239,29 @@ function Meth() {
             <strong>Pro Digital Agency</strong>.
           </Typography>
 
+
+          
+          <Box
+          sx={{
+            bgcolor :'primary.dark' , 
+            display : {md : "none" , xs : 'flex'} , 
+            // flex: 1,
+            overflow: "hidden",
+            my : 2 , 
+            p : 1
+
+
+          }}
+        >
+          <img
+            src="/images/cert.jpg"
+            alt="Étudiants certifiés"
+            // width={600}
+            // height={400}
+            style={{ marginTop :'auto' ,  width: "100%", height: "100%" , borderRadius : '10px' }}
+          />
+        </Box>
+
           <Typography
             variant="body2"
             sx={{ color: theme.palette.text.secondary, mb: 3 }}
@@ -246,6 +270,8 @@ function Meth() {
             véritable atout pour booster votre carrière dans le marketing
             digital, le e-commerce ou la communication.
           </Typography>
+
+
 
 
           <Link href={"/contact"}>

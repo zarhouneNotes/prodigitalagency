@@ -105,7 +105,7 @@ const ContactSection = () => {
         <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
           Horaires
         </Typography>
-        <Typography>Du lundi au vendredi : 9h00 – 18h00</Typography>
+        <Typography>De lundi à dimanche : 9h00 – 20h00</Typography>
       </Box>
     </Stack>
 
@@ -125,7 +125,7 @@ const ContactSection = () => {
         <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
           Email
         </Typography>
-        <Typography>prodigitalagency22@gmail.com</Typography>
+        <Typography>contact@prodigitalagency.com</Typography>
       </Box>
     </Stack>
 

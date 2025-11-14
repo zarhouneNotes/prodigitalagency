@@ -6,40 +6,41 @@ import ContactButton from "./ContactButton";
 
 
 export default function WhyUsSection() {
-    const items = [
-      {
-        id: 1,
-        title: "Encadrement attentionné",
-        description:
-          "Nos éducateurs accompagnent chaque enfant avec douceur et patience, favorisant la confiance et l’éveil. Nous créons un environnement chaleureux où chaque petit se sent écouté, encouragé et valorisé dans ses découvertes quotidiennes.",
-        cta: "Découvrir notre approche",
-        src :'https://images.pexels.com/photos/6457478/pexels-photo-6457478.jpeg?_gl=1*18dhn20*_ga*MTA3MzQ4NzM0OC4xNzUwODg0Njc2*_ga_8JE65Q40S6*czE3NjI4NjA1MDYkbzE5JGcxJHQxNzYyODYwNTUxJGoxNSRsMCRoMA..'
-      },
-      {
-        id: 2,
-        title: "Programme éducatif complet",
-        description:
-          "Nous proposons un programme riche qui combine apprentissage, créativité et motricité. Chaque activité est pensée pour stimuler la curiosité, développer les compétences clés et encourager l’autonomie dès le plus jeune âge.",
-        cta: "Voir le programme",
-        src :'https://images.pexels.com/photos/636246/pexels-photo-636246.jpeg'
-      },
-      {
-        id: 3,
-        title: "Sécurité et bien-être",
-        description:
-          "La sécurité et le confort des enfants sont au cœur de nos priorités. Nos locaux sont entièrement adaptés, équipés et surveillés, offrant un cadre sain et rassurant propice au développement harmonieux.",
-        cta: "Nos engagements",
-        src :'https://images.pexels.com/photos/8761328/pexels-photo-8761328.jpeg'
-      },
-      {
-        id: 4,
-        title: "Communication transparente",
-        description:
-          "Nous croyons qu’une relation de confiance passe par une communication claire et constante. Les parents sont régulièrement informés des activités, progrès et événements à venir grâce à notre application dédiée.",
-        cta: "Espace parents",
-        src :'https://images.pexels.com/photos/3184438/pexels-photo-3184438.jpeg'
-      },
-    ];
+  const items = [
+    {
+      id: 1,
+      title: "Encadrement professionnel",
+      description:
+        "Nos formateurs expérimentés accompagnent chaque apprenant avec une approche personnalisée. Leur objectif : vous guider pas à pas vers la maîtrise du digital, que vous soyez étudiant, entrepreneur ou déjà en activité.",
+      cta: "Découvrir notre équipe",
+      src: "https://images.pexels.com/photos/3184643/pexels-photo-3184643.jpeg"
+    },
+    {
+      id: 2,
+      title: "Programme de formation complet",
+      description:
+        "Nos parcours couvrent l’ensemble des compétences essentielles : marketing digital, techniques de vente, gestion de campagnes publicitaires, réseaux sociaux, SEO et e-commerce. Un contenu structuré, pratique et orienté résultats.",
+      cta: "Voir les formations",
+      src: "https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg"
+    },
+    {
+      id: 3,
+      title: "Accompagnement stratégique",
+      description:
+        "Nous aidons les entrepreneurs et entreprises à structurer leur présence en ligne grâce à des conseils stratégiques, des audits personnalisés et un suivi professionnel pour atteindre leurs objectifs de croissance.",
+      cta: "Découvrir l’accompagnement",
+      src: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+    },
+    {
+      id: 4,
+      title: "Suivi transparent & résultats mesurables",
+      description:
+        "Nous privilégions une communication claire : avancement, recommandations, performances et axes d’amélioration. Chaque apprenant ou entreprise bénéficie d’un suivi détaillé pour progresser efficacement.",
+      cta: "En savoir plus",
+      src: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
+    }
+  ];
+  
 
   return (
     <Box

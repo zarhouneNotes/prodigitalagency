@@ -12,8 +12,8 @@ export default function StatsSection() {
     <Box
       sx={{
         display: "grid",
-        gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr", md: "repeat(3, 1fr)" },
-        gap: 3,
+        gridTemplateColumns: "repeat(3, 1fr)" ,
+        gap: { md :  3 , xs : 0.5},
         py: 6,
         // px: { xs: 2, md: 6 },
       }}

@@ -13,14 +13,6 @@ export default function ServicesCarousel( ) {
     const theme  = useTheme()
     const homepageServices =  [
       {
-        id: 1,
-        title: "Techniques de vente",
-        description:
-          "Apprenez à maîtriser les méthodes de vente modernes : prospection, argumentaire, négociation et fidélisation client. Une formation conçue pour renforcer votre confiance et améliorer vos performances commerciales, que vous soyez débutant ou professionnel expérimenté.",
-        img: "https://images.pexels.com/photos/5239812/pexels-photo-5239812.jpeg", // chemin exemple
-        cta: "Découvrir la formation",
-      },
-      {
         id: 2,
         title: "Marketing digital",
         description:
@@ -28,6 +20,15 @@ export default function ServicesCarousel( ) {
         img: "https://images.pexels.com/photos/6476187/pexels-photo-6476187.jpeg",
         cta: "Voir le programme",
       },
+      {
+        id: 1,
+        title: "Techniques de vente",
+        description:
+          "Apprenez à maîtriser les méthodes de vente modernes : prospection, argumentaire, négociation et fidélisation client. Une formation conçue pour renforcer votre confiance et améliorer vos performances commerciales, que vous soyez débutant ou professionnel expérimenté.",
+        img: "https://images.pexels.com/photos/5239812/pexels-photo-5239812.jpeg", // chemin exemple
+        cta: "Découvrir la formation",
+      },
+      
       {
         id: 3,
         title: "E-commerce",

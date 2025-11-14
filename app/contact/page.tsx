@@ -55,44 +55,20 @@ function page() {
       {/* <ContactCards /> */}
       <ContactForm />
 
-      <Box   sx={{ background : purple[100] ,  width: "100%" , display : 'flex' , alignItems : 'center', flexDirection : { md :"row" , xs :'column'}  }}>
-      {/* Optional title */}
-      <Typography
-
-        variant="h5"
-        sx={{
-          textAlign: "center",
-          fontWeight: 600,
-          color: "#D81B60",
-          p: 4,
-          width: {md :   "50%" , xs : '100%'},
-         
-
-        }}
-      >
-        Passez nous voir au centre Pro Digital Agency, un espace dédié à la formation, à la créativité et à l’innovation digitale.
-      </Typography>
+   
 
       <Box
         sx={{
           // p  : {md : 10 , xs :0} ,
-          width: {md :   "50%" , xs : '100%'},
+          width: {md :   "100%" , xs : '100%'},
           height: { xs: 300, md: 500 },
           overflow: "hidden",
           // borderRadius: 3,
           // boxShadow: "0 4px 16px rgba(0,0,0,0.05)",
         }}
       >
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3343.021875746924!2d-8.011478484809852!3d31.63183798135233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdae5adbe95d4567%3A0xa11e6d43344d0c4e!2s35%20Bd%20Abdelkrim%20Khattabi%2C%20Marrakech%2C%20Morocco!5e0!3m2!1sen!2sus!4v1705758981234!5m2!1sen!2sus"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen={false}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </Box>
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.816918609665!2d-7.6339391999999995!3d33.5841025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d3d922083525%3A0xb0431891256344c!2sPro%20digital%20agency!5e0!3m2!1sfr!2sma!4v1763127619496!5m2!1sfr!2sma" width="100%" height={ '100%'} loading="lazy" ></iframe>
+     
     </Box>
     {/* <QuoteSection /> */}
 

@@ -1,6 +1,7 @@
 import React from "react";
-import { Box, Typography, Link, Stack, Divider } from "@mui/material";
+import { Box, Typography, Stack, Divider } from "@mui/material";
 import { FiPhone, FiMail, FiMapPin } from "react-icons/fi";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -37,14 +38,14 @@ export default function Footer() {
           <Stack spacing={1}>
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               <FiPhone size={16} />
-              <Link href="tel:+212661235749" color="inherit" underline="hover">
+              <Link style={{textDecoration :'none' , color: 'inherit'}} href="tel:+212661235749" color="inherit" underline="hover">
                 +212 661 235749
               </Link>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               <FiMail size={16} />
-              <Link href="mailto:prodigitalagency22@gmail.com" color="inherit" underline="hover">
-                prodigitalagency22@gmail.com
+              <Link style={{textDecoration :'none' , color: 'inherit'}} href="mailto:prodigitalagency22@gmail.com" color="inherit" underline="hover">
+                contact@prodigitalagency.com
               </Link>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
@@ -62,11 +63,11 @@ export default function Footer() {
             Liens
           </Typography>
           <Stack spacing={1}>
-            <Link href="#" color="inherit" underline="hover">Accueil</Link>
-            <Link href="#" color="inherit" underline="hover">Formations</Link>
-            <Link href="#" color="inherit" underline="hover">Blog</Link>
-            <Link href="#" color="inherit" underline="hover">À propos</Link>
-            <Link href="#" color="inherit" underline="hover">Contact</Link>
+            <Link  style={{textDecoration :'none' , color: 'inherit'}} href="/" color="inherit" underline="hover">Accueil</Link>
+            <Link style={{textDecoration :'none' , color: 'inherit'}} href="/formations" color="inherit" underline="hover">Formations</Link>
+            <Link style={{textDecoration :'none' , color: 'inherit'}} href="/methodologie" color="inherit" underline="hover">Méthodologie</Link>
+            <Link style={{textDecoration :'none' , color: 'inherit'}} href="/apropos" color="inherit" underline="hover">À propos</Link>
+            <Link style={{textDecoration :'none' , color: 'inherit'}} href="/contact" color="inherit" underline="hover">Contact</Link>
           </Stack>
         </Box>
       </Stack>

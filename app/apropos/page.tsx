@@ -55,43 +55,31 @@ function page() {
         </Typography>
       </Box>
     </Box>
-    <AboutSectionOne />
-    {/* <ClinicHighlights /> */}
+    <AboutSectionOne /> 
+    {/* <ClinicHighlights /> */}  
 
-    <Box component="section" sx={{   px: { xs: 1, md: 10 } , pb : 8  , bgcolor : grey[200]}}>
+    <Box component="section" sx={{             p : { md  : 10 , xs : 0} ,  pb : 8  , bgcolor : grey[200]}}>
       {/* === SECTION 1 : APPRENDRE ET ÉVOLUER === */}
    
 
       {/* === SECTION 2 : NOTRE APPROCHE === */}
       <Stack
-        direction={{ xs: "column", md: "row" }}
-        alignItems="center"
-        spacing={6}
-        sx={{
-          backgroundColor: theme.palette.background.default,
-          py: { xs: 6, md: 8 },
-          px: { xs: 2, md: 4 },
-          boxShadow: "0 8px 20px rgba(0,0,0,0.05)",
-        }}
-      >
-        {/* Image */}
-        <Box
           sx={{
-            flex: 1,
-            borderRadius: "20px",
-            overflow: "hidden",
-            width: "100%",
-            maxWidth: 550,
+            display: "flex",
+            // gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },:
+            gap: 6,
+            alignItems: "center",
+            // mb: 10,
+            justifyContent :"center" , 
+            bgcolor : '#fff' , 
+            p : { md  : 10 , xs : 1} , 
+            width :{md :  "90vw" , xs : "100vw"} , 
+            flexDirection :{ md :   "row" , xs : "column" }, 
+            mx :'auto',
+            pb : 0
           }}
-        >
-          <img
-            src="/images/salle.png"
-            alt="Approche pédagogique et accompagnement"
-            width={600}
-            height={400}
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-          />
-        </Box>
+      >
+     
 
         {/* Texte */}
         <Box sx={{ flex: 1, textAlign: { xs: "center", md: "left" } }}>
@@ -113,14 +101,28 @@ function page() {
               lineHeight: 1.8,
             }}
           >
-            Notre approche allie <strong>pédagogie, expertise et accompagnement
-            personnalisé</strong> pour vous permettre d’atteindre vos objectifs
-            de visibilité, de croissance et de réussite numérique.
-            <br />
-            Chaque formation est conçue pour être pratique, humaine et orientée
-            résultats, afin de vous donner les outils nécessaires pour réussir
-            dans le monde digital d’aujourd’hui.
+<b>           Notre approche combine pédagogie, expertise et accompagnement personnalisé pour vous aider à atteindre vos objectifs de visibilité et de croissance.
+</b>            Chaque formation est pensée pour être pratique, humaine et orientée résultats, avec des exercices concrets et un suivi adapté à votre niveau.
+            Nous vous donnons les outils essentiels pour maîtriser les leviers du digital et progresser avec confiance, que vous soyez étudiant, entrepreneur ou entreprise.
           </Typography>
+        </Box>
+
+           {/* Image */}
+           <Box
+          sx={{
+            flex: 1,
+            // borderRadius: "20px",
+            overflow: "hidden",
+            width: "100%",
+            maxWidth: 550,
+          }}
+        >
+          <img
+            src="/images/salle.png"
+            alt="Approche pédagogique et accompagnement"
+            
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
         </Box>
       </Stack>
     </Box>
