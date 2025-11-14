@@ -18,7 +18,7 @@ const poppins = Poppins({
 });
 export const metadata: Metadata = {
   title: "Pro Digital Agence",
-  description: "cabinet dr Chehaibou Dounia  ",
+  description: "Cabinet de formation et d’accompagnement en marketing digital  ",
 };
 
 export default function RootLayout({
