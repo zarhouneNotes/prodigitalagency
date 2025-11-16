@@ -1,15 +1,78 @@
 "use client";
 
-import { Box, Typography, TextField, Button, MenuItem, Stack } from "@mui/material";
+import { Box, Typography, TextField, Button, MenuItem, Stack, Alert } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { grey } from "@mui/material/colors";
+import { useState } from "react";
+
+// interface formData {
+//   name : String ,
+//   phone : Number  , 
+//   email : String , 
+//   formation : String , 
+//   message : String 
+// }
 
 const ContactSection = () => {
   const theme = useTheme();
+  const [result, setResult] = useState("");
+  const [err, setErr] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    formation: '',
+    message: '' 
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit =  async (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission here
+
+
+    const { name, email, message , formation , phone } = formData;
+
+    const formPayload = new FormData();
+
+    formPayload.append('name', name);
+    formPayload.append('email', email);
+    formPayload.append('phone', phone);
+    formPayload.append('message', message);
+    formPayload.append('formation', formation);
+    formPayload.append('access_key', "655d80e7-c7e1-4cc8-8b7b-49851e27937f");
+    
+
+    
+    const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formPayload,
+      });
+
+      const data = await response.json();
+      
+      if (data.success) {
+        setErr(false)
+        setResult("Votre message a été envoyé.");
+    //   e.target.reset();
+    } else {
+    //   console.log("Error", data);
+       setErr(true)
+       setResult(data.message);
+    }
+
+    
+  };
 
   const formations = [
     "Marketing Digital",
@@ -125,7 +188,7 @@ const ContactSection = () => {
         <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
           Email
         </Typography>
-        <Typography>contact@prodigitalagency.com</Typography>
+        <Typography>contactprodigitalagency@gmail.com</Typography>
       </Box>
     </Stack>
 
@@ -191,23 +254,27 @@ const ContactSection = () => {
             mx: { xs: "0px", md: 0 },
           }}
         >
-          <TextField label="Nom complet" variant="outlined" fullWidth required />
-          <TextField label="Téléphone" variant="outlined" fullWidth required />
-          <TextField label="Email" type="email" variant="outlined" fullWidth required />
-          <TextField
+          <TextField onChange={handleChange} name="name" label="Nom complet" variant="outlined" fullWidth required />
+          <TextField  onChange={handleChange} name='phone'  label="Téléphone" variant="outlined" fullWidth required />
+          <TextField  onChange={handleChange} name='email' label="Email" type="email" variant="outlined" fullWidth required />
+          <TextField onChange={handleChange}
+            name='formation'
             select
             label="Formation intéressé(e)"
             variant="outlined"
             fullWidth
             required
+            value={formData.formation || ""} 
+            
           >
             {formations.map((formation) => (
-              <MenuItem key={formation} value={formation}>
+              <MenuItem key={formation}  defaultChecked={formation == 'Marketing Digital'}   value={formation}>
                 {formation}
               </MenuItem>
             ))}
           </TextField>
-          <TextField
+          <TextField  onChange={handleChange}
+            name='message'
             label="Message"
             multiline
             rows={4}
@@ -217,6 +284,7 @@ const ContactSection = () => {
           />
 
           <Button
+           onClick={handleSubmit}
             variant="contained"
             color="primary"
             size="large"
@@ -232,6 +300,7 @@ const ContactSection = () => {
           >
             Envoyer
           </Button>
+          { result &&  <Alert severity={ err ? 'error' :  'success'}>{result}</Alert>}
         </Stack>
       </Box>
     </Box>

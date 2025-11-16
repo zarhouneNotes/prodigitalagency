@@ -44,8 +44,8 @@ export default function Footer() {
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
               <FiMail size={16} />
-              <Link style={{textDecoration :'none' , color: 'inherit'}} href="mailto:prodigitalagency22@gmail.com" color="inherit" underline="hover">
-                contact@prodigitalagency.com
+              <Link style={{textDecoration :'none' , color: 'inherit'}} href="mailto:contactprodigitalagency@gmail.com" color="inherit" underline="hover">
+                  contactprodigitalagency@gmail.com
               </Link>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>

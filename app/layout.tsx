@@ -8,6 +8,7 @@ import Providers from '../Providers'
 import { Box, CssBaseline } from "@mui/material";
 import Head from "next/head";
 import Footer from "@/Components/Footer";
+import WhatsAppBubble from "@/Components/WhatsAppBubble";
 
 
 
@@ -37,6 +38,8 @@ export default function RootLayout({
         <MyNavbar />
          {children}
          {/* <Box  bgcolor={"grey"}  >HEY</Box> */}
+
+         <WhatsAppBubble />
          <Footer />
        </Providers>
       </body>
