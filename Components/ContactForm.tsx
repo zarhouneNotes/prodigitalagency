@@ -99,7 +99,7 @@ const ContactSection = () => {
     flex: 1,
     background: `linear-gradient(135deg, ${theme.palette.primary.dark} 70%, ${theme.palette.primary.main} 100%)`,
     color: "white",
-    p: { xs: 5, md: 8 },
+    p: { xs: 2, md: 8 },
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -176,7 +176,7 @@ const ContactSection = () => {
       <PhoneIcon sx={{ color: "white", fontSize: 28 }} />
       <Box>
         <Typography variant="subtitle2" sx={{ fontWeight: 600 }}>
-          Téléphone
+          Numéro de la directice
         </Typography>
         <Typography>+212 661 235749</Typography>
       </Box>
@@ -199,8 +199,9 @@ const ContactSection = () => {
           Adresse
         </Typography>
         <Typography>
-          45 rue De l'Atlas N10 Maarif,
-          <br /> au-dessus de La Colombe d'Or
+        Boulevard Abdelmoumen, angle Boulevard Anoual, <br />
+         à côté de la maison Ford et Opel. <br />
+        Centre Miarj, 4ᵉ étage, porte 54.
         </Typography>
       </Box>
     </Stack>

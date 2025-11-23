@@ -24,9 +24,9 @@ const MyNavbar = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'))
   const path = usePathname()
 
-  // useEffect(()=>{
-  //   console.log(path)
-  // }, [path])
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  }, [path])
   
 
   function isActive (p:String):boolean {
@@ -46,7 +46,9 @@ const MyNavbar = () => {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <img src={"/images/logo.png"}  alt="pro digital agency" width={90} style={{margin : "20px"}} />
+      <Link href={"/"}>
+       <img src={"/images/logo.png"}  alt="pro digital agency" width={90} style={{margin : "20px"}} />
+      </Link>
 
    
       <Divider />
