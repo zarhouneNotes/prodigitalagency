@@ -48,10 +48,10 @@ export default function Footer() {
                   contactprodigitalagency@gmail.com
               </Link>
             </Box>
-            <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <Box sx={{ display: "flex", alignItems: "start", gap: 1 }}>
               <FiMapPin size={16} />
               <Typography variant="body2" color="grey.300">
-                45 rue De l'Atlas N10 Maarif, au-dessus de La Colombe d'Or
+                Intersection du boulevard Anoual et du boulevard Abdelmoumen, Centre Miraj, 4ᵉ étage, porte 54, Casablanca, à côté de la maison Opel.
               </Typography>
             </Box>
           </Stack>
