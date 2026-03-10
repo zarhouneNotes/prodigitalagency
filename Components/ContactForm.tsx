@@ -199,9 +199,7 @@ const ContactSection = () => {
           Adresse
         </Typography>
         <Typography>
-        Boulevard Abdelmoumen, angle Boulevard Anoual, <br />
-         à côté de la maison Ford et Opel. <br />
-        Centre Miarj, 4ᵉ étage, porte 54.
+        45 rue de l’atlas 3è àme étage N°10 , Maarif , Casablanca
         </Typography>
       </Box>
     </Stack>
